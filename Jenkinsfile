@@ -37,16 +37,18 @@ environment {
                 }
             }
         }
-        stage('Test') {
+        stage('Install Dependencies') {
             steps {
-                echo "Hello"
+                sh """
+                    npm install 
+                """
             }
         }
         stage('Deploy') {
             steps {
                 sh '''
                 echo "We can write shell script here"
-                env
+                #env
                 echo "$Greeting"
                 #sleep 10
                 '''
