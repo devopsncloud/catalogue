@@ -44,12 +44,21 @@ environment {
                 """
             }
         }
+
+        stage('Build') {
+            steps {
+                sh """
+                    ls -la
+                """
+            }
+        }
+
+
         stage('Deploy') {
             steps {
                 sh '''
                 echo "We can write shell script here"
                 #env
-                echo "$Greeting"
                 #sleep 10
                 '''
             }
