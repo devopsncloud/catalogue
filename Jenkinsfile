@@ -63,11 +63,11 @@ environment {
                     protocol: 'http',
                     nexusUrl: '${nexusURL}',
                     groupId: 'com.roboshop',
-                    version: '${packageVersion}',
+                    version: '${packageVersion}' ,
                     repository: 'catalogue',
                     credentialsId: 'nexus-creds',
                     artifacts: [
-                        [artifactId: catalogue,
+                        [artifactId: 'catalogue',
                         classifier: '',
                         file: 'catalogue.zip',
                         type: 'zip']
