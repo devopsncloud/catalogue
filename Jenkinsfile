@@ -80,7 +80,7 @@ environment {
         stage('Deploy') {
             steps {
               
-                    build job:'catalogue-deploy' ,wait: true, parameters:[
+                    build job:'Catalogue_Deploy' ,wait: true, parameters:[
                     string(name: 'version',value: '${params.packageVersion}'),
                     string(name: 'environment',value:'dev')
                  ]
