@@ -79,11 +79,11 @@ environment {
 
         stage('Deploy') {
             steps {
-                sh '''
-                echo "We can write shell script here"
-                #env
-                #sleep 10
-                '''
+              
+                    build job:'catalogue-deploy' ,wait: true, parameters:[
+                    string(name: 'version',value: '${params.packageVersion}')
+                    string(name: 'environment',value:'dev')
+                 ]
             }
         }
 
