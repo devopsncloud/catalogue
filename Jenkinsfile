@@ -7,9 +7,7 @@ pipeline {
 }
 
 environment { 
-    // packageVersion = ''
-    def packageJson = readJSON file: 'package.json'
-        packageVersion = packageJson.version
+    packageVersion = ''
     nexusURL = '172.31.39.211:8081'
     }
 
