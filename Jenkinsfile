@@ -21,7 +21,7 @@ environment {
 
     //     text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
 
-    //     booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+        booleanParam(name: 'Deploy', defaultValue: false, description: 'Toggle this value')
 
     //     choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
@@ -95,6 +95,12 @@ environment {
 
 
         stage('Deploy') {
+            when { 
+                expression {
+                params.Deploy == true
+                }
+            }
+
             steps {
               
                     build job:'Catalogue_Deploy' ,wait: true, parameters:[
