@@ -16,7 +16,7 @@ environment {
                 disableConcurrentBuilds() 
     }
 
-    // parameters {
+     parameters {
     //     string(name: 'PERSON', defaultValue: 'Jenkins', description: 'Who should I say hello to?')
 
     //     text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
@@ -26,7 +26,7 @@ environment {
     //     choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
     //     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-    // }
+     }
 
     stages {
         stage('Get the version from json file') {
