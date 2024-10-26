@@ -7,7 +7,11 @@
 def configMap = [
     application = 'nodejsVM'
     component = 'catalogue'
-
 ]
 
- echo "${printEnv()}"
+if( env.BRANCH_NAME.equalsIgnoreCase(main)){
+    pipelineDecision.decidePipeline(configMap)
+}
+else{
+    echo "This is production, deal with CR process"
+}
