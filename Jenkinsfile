@@ -92,7 +92,7 @@ environment {
             steps {
               
                     build job:'Catalogue_Deploy' ,wait: true, parameters:[
-                    string(name: 'version',value: "${packageVersion}")
+                    string(name: 'version',value: "${packageVersion}"),
                     string(name: 'environment',value:'dev')
                  ]
             }
