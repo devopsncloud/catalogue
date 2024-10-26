@@ -10,4 +10,4 @@ def configMap = [
 
 ]
 
-printEnv()
+ echo "${printEnv()}"
