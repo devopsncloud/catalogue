@@ -5,7 +5,7 @@
 // Our responsibility is to pass what type of application and component to pipeline to decide
 
 def configMap = [
-    application = 'nodejsVM'
+    application = 'nodejsVM',
     component = 'catalogue'
 ]
 
