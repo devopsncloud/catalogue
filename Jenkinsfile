@@ -46,6 +46,22 @@ environment {
             }
         }
 
+        stage('UnitTest ') {
+            steps {
+                sh """
+                    echo "UNIT TEST RUNS HERE"
+                """
+            }
+        }
+
+        stage('Scanning Code ') {
+            steps {
+                sh """
+                    sonar-scanner
+                """
+            }
+        }
+
         stage('Build') {
             steps {
                 sh """
