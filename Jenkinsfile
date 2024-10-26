@@ -77,16 +77,6 @@ environment {
         }
 
 
-        // stage('Deploy') {
-        //     steps {
-              
-        //             build job:'Catalogue_Deploy' ,wait: true, parameters:[
-        //             string(name: 'version',value: "${params.packageVersion}"),
-        //             string(name: 'environment',value:'dev')
-        //          ]
-        //     }
-        // }
-
 
         stage('Deploy') {
             steps {
